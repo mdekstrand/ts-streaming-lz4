@@ -5,6 +5,9 @@
   "publish": {
     "include": [
       "pkg/streaming_lz4.*"
+    ],
+    "exclude": [
+      "!pkg"
     ]
   }
 }
