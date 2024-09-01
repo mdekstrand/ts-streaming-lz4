@@ -1,7 +1,7 @@
 {
   "name": "@mdekstrand/streaming-lz4",
   "version": "0.1.0-a1",
-  "exports": "./pkg/streaming_lz4.js",
+  "exports": "./mod.ts",
   "publish": {
     "include": [
       "pkg/streaming_lz4*"
