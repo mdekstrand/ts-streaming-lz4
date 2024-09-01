@@ -1,9 +1,9 @@
 use std::io;
 
 use lz4_flex::frame::{FrameDecoder, FrameEncoder};
-use streaming_lz4::error::StreamError;
+use streaming_lz4::error::LZ4Error;
 
-fn main() -> Result<(), StreamError> {
+fn main() -> Result<(), LZ4Error> {
     let args: Vec<_> = std::env::args().collect();
     let decompress = args.iter().any(|a| a == "-d");
 

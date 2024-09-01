@@ -5,7 +5,7 @@ use wasm_bindgen::prelude::*;
 
 use lz4_flex::frame::FrameEncoder;
 
-use crate::error::StreamError;
+use crate::error::LZ4Error;
 
 #[wasm_bindgen]
 extern "C" {
@@ -36,12 +36,12 @@ impl LZ4EncoderStream {
     }
 
     #[allow(non_snake_case)]
-    pub fn writeSync(&mut self, data: &[u8]) -> Result<usize, StreamError> {
+    pub fn writeSync(&mut self, data: &[u8]) -> Result<usize, LZ4Error> {
         Ok(self.encoder.write(data)?)
     }
 
     /// Finish the underlying LZ4 stream and release the encoder.
-    pub fn finish(self) -> Result<(), StreamError> {
+    pub fn finish(self) -> Result<(), LZ4Error> {
         self.encoder.finish()?;
         Ok(())
     }
