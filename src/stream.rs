@@ -15,6 +15,7 @@ extern "C" {
     fn writeSync(this: &WriterSync, data: &[u8]) -> Result<usize, JsValue>;
 }
 
+/// Stream-format LZ4 encoder.
 #[wasm_bindgen]
 pub struct LZ4EncoderStream {
     encoder: FrameEncoder<JSWriter>,
@@ -22,6 +23,7 @@ pub struct LZ4EncoderStream {
 
 #[wasm_bindgen]
 impl LZ4EncoderStream {
+    /// Construct a new LZ4 encoder stream from a Deno `WriterSync`.
     #[wasm_bindgen(constructor)]
     pub fn new(out: WriterSync) -> LZ4EncoderStream {
         let out = JSWriter::new(out);
