@@ -5,7 +5,9 @@
   "exclude": [
     "!pkg",
     "src",
-    ".vsccode",
-    ".github"
+    ".vscode",
+    ".github",
+    "Cargo.*",
+    ".editorconfig"
   ]
 }
