@@ -2,12 +2,10 @@
   "name": "@mdekstrand/streaming-lz4",
   "version": "0.1.0-a2",
   "exports": "./mod.ts",
-  "publish": {
-    "include": [
-      "pkg/streaming_lz4*"
-    ],
-    "exclude": [
-      "!pkg"
-    ]
-  }
+  "exclude": [
+    "!pkg",
+    "src",
+    ".vsccode",
+    ".github"
+  ]
 }

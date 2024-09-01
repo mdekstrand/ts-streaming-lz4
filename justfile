@@ -6,3 +6,6 @@ build:
 clean:
     cargo clean
     rm -rf pkg
+
+check-publish: build
+    deno publish --dry-run
