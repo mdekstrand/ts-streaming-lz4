@@ -1,4 +1,4 @@
-use std::io::Write;
+use std::io::{Read, Write};
 
 use error::StreamError;
 use wasm_bindgen::prelude::*;
