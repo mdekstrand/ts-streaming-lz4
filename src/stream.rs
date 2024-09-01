@@ -9,6 +9,7 @@ use crate::error::StreamError;
 
 #[wasm_bindgen]
 extern "C" {
+    #[wasm_bindgen(typescript_type = "WriterSync")]
     pub type WriterSync;
 
     #[wasm_bindgen(method, structural, catch)]
@@ -39,6 +40,7 @@ impl LZ4EncoderStream {
         Ok(self.encoder.write(data)?)
     }
 
+    /// Finish the underlying LZ4 stream and release the encoder.
     pub fn finish(self) -> Result<(), StreamError> {
         self.encoder.finish()?;
         Ok(())

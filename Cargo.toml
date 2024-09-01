@@ -1,6 +1,6 @@
 [package]
-name = "lz4-streaming-wasm"
-version = "0.1.0"
+name = "streaming-lz4"
+version = "0.1.0-a1"
 authors = ["Michael Ekstrand <md@ekstrandom.net>"]
 edition = "2018"
 license = "MIT"
