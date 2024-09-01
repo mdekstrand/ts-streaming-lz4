@@ -1,0 +1,16 @@
+root = true
+
+[*]
+insert_final_newline = true
+charset = utf-8
+indent_style = space
+indent_size = 4
+
+[{*.js,*.mjs,*.ts,*.css,*.scss}]
+indent_size = 2
+
+[{*.yml,*.yaml,*.json}]
+indent_size = 2
+
+[*.xml]
+indent_size = 2

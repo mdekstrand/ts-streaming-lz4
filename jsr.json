@@ -1,11 +1,10 @@
 {
-    "name": "@mdekstrand/streaming-lz4",
-    "version": "0.1.0-a1",
-    "exports": "./pkg/streaming_lz4.js",
+  "name": "@mdekstrand/streaming-lz4",
+  "version": "0.1.0-a1",
+  "exports": "./pkg/streaming_lz4.js",
+  "publish": {
     "include": [
-        "pkg/streaming_lz4.*"
-    ],
-    "exclude": [
-        "!pkg/*"
+      "pkg/streaming_lz4.*"
     ]
+  }
 }

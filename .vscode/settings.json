@@ -1,5 +1,4 @@
-{ 
-    "[rust]": {
-        "editor.formatOnSave": true
-    }
+{
+    "editor.formatOnSave": true,
+    "deno.enable": true
 }
