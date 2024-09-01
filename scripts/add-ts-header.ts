@@ -5,7 +5,7 @@ import { writeAll } from "jsr:@std/io@^0.224";
 const encoder = new TextEncoder();
 
 for (const mod of Deno.args) {
-  let parsed = parsePath(mod);
+  const parsed = parsePath(mod);
   console.info("fixing JS script %s", parsed.name);
   const text = await Deno.readFile(mod);
   using file = await Deno.open(mod, { write: true, truncate: true });
