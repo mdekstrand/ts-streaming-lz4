@@ -4,5 +4,8 @@
     "exports": "./pkg/streaming_lz4.js",
     "include": [
         "pkg/streaming_lz4.*"
-    ]
-  }
+    ],
+    "devDependencies": {
+        "jsr": "^0.13.1"
+    }
+}
