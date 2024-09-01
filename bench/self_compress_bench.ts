@@ -15,7 +15,7 @@ const files = {
     "pkg/streaming_lz4_bg.wasm",
   ),
   cli: await Deno.readFile("target/debug/streaming-lz4"),
-  deno: await Deno.readFile(Deno.execPath()),
+  // deno: await Deno.readFile(Deno.execPath()),
 };
 
 for (const [name, data] of Object.entries(files)) {
