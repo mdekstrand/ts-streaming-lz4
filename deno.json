@@ -9,7 +9,8 @@
       ".vscode",
       ".github",
       "Cargo.*",
-      ".editorconfig"
+      ".editorconfig",
+      "bench"
     ]
   }
 }
