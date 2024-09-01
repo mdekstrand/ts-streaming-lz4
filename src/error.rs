@@ -5,8 +5,10 @@ use wasm_bindgen::JsValue;
 pub enum StreamError {
     #[error("IO error")]
     IOError(#[from] std::io::Error),
-    #[error("LZ4 encoding error")]
+    #[error("LZ4 streaming error")]
     LZ4Error(#[from] lz4_flex::frame::Error),
+    #[error("LZ4 block decompression error")]
+    Decompress(#[from] lz4_flex::block::DecompressError),
 }
 
 impl Into<JsValue> for StreamError {
