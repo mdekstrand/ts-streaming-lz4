@@ -4,7 +4,7 @@
   "exports": "./pkg/streaming_lz4.js",
   "publish": {
     "include": [
-      "pkg/streaming_lz4.*"
+      "pkg/streaming_lz4*"
     ],
     "exclude": [
       "!pkg"
