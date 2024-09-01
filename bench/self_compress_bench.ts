@@ -15,14 +15,17 @@ const files = {
     "pkg/streaming_lz4_bg.wasm",
   ),
   cli: await Deno.readFile("target/debug/streaming-lz4"),
+  deno: await Deno.readFile(Deno.execPath()),
 };
 
 for (const [name, data] of Object.entries(files)) {
   console.info("source %s: %d bytes", name, data.length);
 
-  Deno.bench("compress_block", { group: name, baseline: true }, () => {
-    compress_block(data);
-  });
+  if (name != "deno") {
+    Deno.bench("compress_block", { group: name, baseline: true }, () => {
+      compress_block(data);
+    });
+  }
 
   Deno.bench("compress_framed", { group: name }, () => {
     compress_framed(data);
