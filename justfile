@@ -10,3 +10,9 @@ clean:
 
 check-publish: build
     deno publish --dry-run
+
+publish: build
+    deno publish
+
+bench: build
+    deno bench --allow-read
