@@ -1,4 +1,4 @@
-use std::io::{self, Read, Write};
+use std::io::{self, Write};
 
 use error::LZ4Error;
 use wasm_bindgen::prelude::*;
