@@ -18,7 +18,7 @@ extern "C" {
 
 /// Stream-format LZ4 encoder.
 ///
-/// A stream encoder implements Deno's `WriterSync` writes to an underlying
+/// A stream encoder that implements Deno's `WriterSync` writes to an underlying
 /// `WriterSync`.
 #[wasm_bindgen]
 pub struct LZ4EncoderStream {
