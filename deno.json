@@ -12,5 +12,9 @@
       ".editorconfig",
       "bench"
     ]
+  },
+  "imports": {
+    "@std/io": "jsr:@std/io@^0.225.2",
+    "@std/path": "jsr:@std/path@^1.0.8"
   }
 }

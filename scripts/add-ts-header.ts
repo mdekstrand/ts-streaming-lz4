@@ -1,6 +1,6 @@
 #!/usr/bin/env -S deno run --allow-read=pkg/ --allow-write=pkg/
-import { parse as parsePath } from "jsr:@std/path@1.0";
-import { writeAll } from "jsr:@std/io@^0.224";
+import { parse as parsePath } from "@std/path";
+import { writeAll } from "@std/io";
 
 const encoder = new TextEncoder();
 
