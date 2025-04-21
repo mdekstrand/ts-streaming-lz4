@@ -3,7 +3,7 @@
  * @module
  */
 
-import { Buffer, writeAllSync } from "jsr:@std/io@^0.224";
+import { Buffer, writeAllSync } from "@std/io";
 import { Buffer as StreamBuffer } from "jsr:@std/streams@^1.0";
 
 import { compress_block, compress_framed, LZ4EncoderStream } from "../mod.ts";
@@ -15,17 +15,19 @@ const files = {
     "pkg/streaming_lz4_bg.wasm",
   ),
   cli: await Deno.readFile("target/debug/streaming-lz4"),
-  // deno: await Deno.readFile(Deno.execPath()),
+  deno: await Deno.readFile(Deno.execPath()),
 };
 
 for (const [name, data] of Object.entries(files)) {
   console.info("source %s: %d bytes", name, data.length);
 
-  if (name != "deno") {
-    Deno.bench("compress_block", { group: name, baseline: true }, () => {
-      compress_block(data);
-    });
-  }
+  Deno.bench("compress_block", {
+    group: name,
+    baseline: true,
+    ignore: name == "deno",
+  }, () => {
+    compress_block(data);
+  });
 
   Deno.bench("compress_framed", { group: name }, () => {
     compress_framed(data);
