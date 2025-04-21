@@ -2,7 +2,7 @@
 name = "streaming-lz4"
 version = "0.1.2"
 authors = ["Michael Ekstrand <md@ekstrandom.net>"]
-edition = "2018"
+edition = "2021"
 license = "MIT"
 
 [lib]
