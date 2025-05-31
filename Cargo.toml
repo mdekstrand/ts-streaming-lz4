@@ -1,6 +1,6 @@
 [package]
 name = "streaming-lz4"
-version = "0.2.0-alpha1"
+version = "0.2.0-alpha2"
 authors = ["Michael Ekstrand <md@ekstrandom.net>"]
 edition = "2021"
 license = "MIT"
