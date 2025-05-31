@@ -41,7 +41,7 @@ impl LZ4EncoderStream {
     }
 
     /// Finish the underlying LZ4 stream and release the encoder.
-    pub fn finish(self) -> Result<(), LZ4Error> {
+    pub fn close(self) -> Result<(), LZ4Error> {
         self.encoder.finish()?;
         Ok(())
     }

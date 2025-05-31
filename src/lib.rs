@@ -38,7 +38,7 @@ pub fn compress_framed(bytes: Vec<u8>) -> Result<Vec<u8>, LZ4Error> {
     let out = Vec::<u8>::new();
     let mut enc = FrameEncoder::new(out);
     enc.write_all(&bytes)?;
-    let out = enc.finish()?;
+    let out = enc.close()?;
     Ok(out)
 }
 

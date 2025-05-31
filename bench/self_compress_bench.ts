@@ -37,7 +37,7 @@ for (const [name, data] of Object.entries(files)) {
     const output = new Buffer();
     const enc = new LZ4EncoderStream(output);
     writeAllSync(enc, data);
-    enc.finish();
+    enc.close();
   });
 
   Deno.bench("lz4-wasm-nodejs", { group: name }, () => {
